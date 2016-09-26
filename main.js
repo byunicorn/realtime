@@ -21,7 +21,9 @@ chrome.runtime.onMessage.addListener(function(request, sender, callback) {
 
 	if(request.action === "push") {
 		if (window.location.href.startsWith("file://")) {
-			$("body").append("<div style='position:absolute; top: 0; left: 0;color:white'>" + request.data + "</div>");
+			if (request.data && !isNaN(request.data)) {
+				$("body").find("#data-container").html(request.data);
+			}
 		}
 	}
 });
