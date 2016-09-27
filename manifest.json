@@ -10,9 +10,8 @@
         "default_popup": "popup.html"
     },
     "content_scripts": [{
-    	"matches": ["file:///E:/*", "https://item.taobao.com/*"],
-    	"css": ["style.css"],
-    	"js": ["jquery.js", "main.js"]
+        "matches": ["file:///*", "https://item.taobao.com/*"],
+        "js": ["jquery.js", "content.js"]
     }],
     "background": {
     	"scripts": ["jquery.js", "background.js"],
