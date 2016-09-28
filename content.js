@@ -12,7 +12,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, callback) {
     if(request.action === "push") {
         if (request.data && !isNaN(request.data)) {
             if ($("#data-container").length === 0) {
-                var container = $("<div id='data-container' style='color:black; position:absolute; top:0; left:0; background:white; z-index:99999;'></div>");
+                var container = $("<div id='data-container' style='font-size:35px;color:black; position:absolute; top:0; left:0; background:white; z-index:99999;'></div>");
                 $("body").append(container);
             }
 
