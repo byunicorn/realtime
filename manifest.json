@@ -11,7 +11,8 @@
     },
     "content_scripts": [{
         "matches": ["file:///*", "https://item.taobao.com/*"],
-        "js": ["jquery.js", "content.js"]
+        "js": ["jquery.js", "content.js"],
+        "css": ["animate.css", "style.css"]
     }],
     "background": {
     	"scripts": ["jquery.js", "background.js"],

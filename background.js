@@ -39,6 +39,6 @@ function pullData() {
             });
         });
 
-        setTimeout(pullData, 20000);
+        setTimeout(pullData, 15000);
     }
 }
