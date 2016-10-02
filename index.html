@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<video controls autoplay name="media">
+		<source src="file:///C:/Users/Administrator/Downloads/kh.mp4" type="video/mp4">
+	</video>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			var index = 0;
+			var sources = ["file:///E:/BaiduYunDownload/[TSKS][2016][Train%20To%20Busan][KO_CN].mkv", "file:///C:/Users/Administrator/Downloads/kh.mp4"];
+			var video = $("video");
+			var source = video.find('source');
+		    video.bind('ended', function(){
+		        if (index < sources.length) {
+		        	source.attr("src", sources[index]);
+		        	video.load();
+		        	video.play();
+		        	index += 1;
+		        }
+		    });
+		});
+	</script>
+</body>
+</html>
