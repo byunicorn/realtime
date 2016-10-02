@@ -33,12 +33,13 @@ function pullData() {
     if (isWorking) {
         chrome.tabs.query({active: true}, function(tab) {
             var id = tab[0] && tab[0].id;
-            chrome.tabs.create({url: "https://item.taobao.com/item.htm?id=536796147739", active: false}, function(tab){
+
+            chrome.tabs.create({url: "https://item.taobao.com/item.htm?id=539468793102&unicorn=" + (new Date()).getTime(), active: false}, function(tab){
                 tabs.push(tab.id);
                 sourceTabs.push(id);
             });
         });
 
-        setTimeout(pullData, 15000);
+        setTimeout(pullData, 30000);
     }
 }
